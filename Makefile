@@ -1,9 +1,13 @@
 FC = gfortran
-FCFLAGS = -O2 -g
+FCFLAGS = -O3 -g
 
-common : main.o print.o another.o
+OBJECTS = main.o print.o another.o data.o
+common : $(OBJECTS)
 	$(FC) $(FCFLAGS) $(LDFLAGS) -o $@ $^
 
 .SUFFIXES : .f90 .o
 .f90.o :
 	$(FC) $(FCFLAGS) -c $^
+
+clean :
+	rm -f $(OBJECTS)

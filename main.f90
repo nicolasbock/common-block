@@ -10,6 +10,7 @@ program main
     sv(i) = i
   enddo
 
+  call set_data()
   call print_factors()
   call another_print()
 
