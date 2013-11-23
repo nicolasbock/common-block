@@ -1,5 +1,8 @@
 subroutine another_print ()
 
+  ! All three common blocks are used here. The dimension attribute of sv is used
+  ! already in the common statement, and implies a dimension(3) attribute on sv
+  ! later on.
   common /factors/ sv(3), /more/ a, /more_2/ b
 
   integer :: i

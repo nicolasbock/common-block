@@ -1,5 +1,6 @@
 subroutine print_factors ()
 
+  ! The fact that sv is a vector is communicated to the compiler further down.
   common /factors/ sv
 
   integer :: i

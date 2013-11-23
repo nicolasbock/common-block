@@ -1,5 +1,6 @@
 program main
 
+  ! A named common block here is implicitly saved.
   common /factors/ sv
 
   real(kind = 8), dimension(3) :: sv
