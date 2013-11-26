@@ -4,10 +4,15 @@ subroutine another_print ()
   ! already in the common statement, and implies a dimension(3) attribute on sv
   ! later on.
   common /factors/ sv(3), /more/ a, /more_2/ b
+  common /mismatch/ c, d
+
+  save /mismatch/
 
   integer :: i
   integer :: a
   integer :: b
+  integer :: c
+  integer :: d
   real(kind = 8) :: sv
 
   write(*, *) "a = ", a
