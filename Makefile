@@ -1,7 +1,7 @@
 FC = gfortran
 FCFLAGS = -O3 -g
 
-OBJECTS = main.o print.o another.o data.o
+OBJECTS = main.o print.o a.o b.o
 common : $(OBJECTS)
 	$(FC) $(FCFLAGS) $(LDFLAGS) -o $@ $^
 
